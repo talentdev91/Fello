@@ -1,3 +1,4 @@
+/* Based on https://github.com/mcasimir/generator-mobileangularui */
 /*========================================
 =            Requiring stuffs            =
 ========================================*/
