@@ -28,7 +28,7 @@ var gulp = require('gulp'),
 	browserify = require('browserify'),
 	partials = require('partialify'),
 	reactify = require('reactify'),
-	es6ify = require('es6ify'),
+	babelify = require('babelify'),
 	lodash = require('lodash');
 
 /*=====================================
@@ -45,9 +45,7 @@ var config = {
 	minify_images: true,
 
 	vendor: {
-		js: [
-			'./node_modules/traceur/bin/traceur-runtime.js',
-		],
+		js: [],
 
 		fonts: []
 	},
@@ -236,10 +234,10 @@ gulp.task('js', function() {
 	var b = browserify(config.app, {
 		debug: config.development,
 		fullPaths: false,
-                baseDir: './',
+		baseDir: './',
 		cache: {},
 		packageCache: {},
-		transform: [partials, reactify, es6ify.configure(/.js/)]
+		transform: [partials, reactify, babelify]
 	});
 
 	streamqueue({

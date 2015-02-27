@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "babelify": "^5.0.3",
     "react": "^0.13.0-rc1",
     "react-draggable": "^0.4.0",
     "traceur-runtime": "0.0.59"
   },
   "devDependencies": {
     "browserify": "^8.0.2",
-    "es6ify": "^1.6.0",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.3.4",
     "gulp-connect": "^2.0.5",
